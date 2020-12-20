@@ -1,0 +1,36 @@
+{
+  "name": "covid-19",
+  "version": "1.0.0",
+  "description": "A covid-19 thing.",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/data-grid": "^4.0.0-alpha.13",
+    "@material-ui/icons": "^4.11.2",
+    "bizcharts": "^4.0.16",
+    "d3-fetch": "1.1.2",
+    "d3-scale": "3.1.0",
+    "material-table": "^1.69.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "^4.0.1",
+    "react-simple-maps": "2.0.0",
+    "react-tooltip": "^4.2.11"
+  },
+  "devDependencies": {
+    "typescript": "3.3.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
