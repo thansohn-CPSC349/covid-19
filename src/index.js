@@ -25,7 +25,7 @@ function App() {
   let deaths = data.deaths ? data.deaths.toLocaleString(): "";
   let recovered = data.recovered ? data.recovered.toLocaleString(): "";
   let critical = data.critical ? data.critical.toLocaleString(): "";
-  let percent_survived = ((data.recovered / data.cases) * 100).toFixed(1) + "%";
+  let recovery_rate = ((data.recovered / data.cases) * 100).toFixed(1) + "%";
 
   return (
     <>
@@ -72,7 +72,7 @@ function App() {
         </div> 
         <div className="info-div5">
           <SmallInfoWidget 
-          topText={percent_survived}
+          topText={recovery_rate}
           topColor="#32CD32"
           bottomText="Estimated US Recovery Rate"
           bottomColor="#000000"
