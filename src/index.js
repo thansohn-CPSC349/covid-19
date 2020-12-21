@@ -90,7 +90,10 @@ function App() {
       </div>
       <div className="footer">
         <div className="footer-div">
-            - By Tyler Hansohn - Data source used: <a href="http://disease.sh/">disease.sh</a> - Libraries used: bizCharts, d3, material-table, Material-UI, React.JS, react-simple-maps, react-tooltip - Data may take a few seconds to load -
+            <p>
+              - By Tyler Hansohn - Data source used: <a href="http://disease.sh/">disease.sh</a> - Libraries used: bizCharts, d3, material-table, 
+              Material-UI, React.JS, react-simple-maps, react-tooltip - Data may take a few seconds to load -
+            </p>
         </div>
       </div>
    </>
