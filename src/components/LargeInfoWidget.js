@@ -61,18 +61,18 @@ const LargeInfoWidget = ({USAState, nationalData}) => {
         <> 
             <Card variant="outlined">
                 <CardContent style={{fontSize:"14px", textAlign:"left"}}>
-                    <div style={{fontSize:"20px",fontWeight:"bold"}}><u>{USAState}</u></div><br/>
+                    <div style={{fontSize:"20px",fontWeight:"bold"}}><u>{USAState}</u></div><br />
                     Population: {data.population ? data.population.toLocaleString() : ""}
-                    <br/><br/>
-                    Total Confirmed Cases: {data.cases ? data.cases.toLocaleString() : "0"}<br />
-                    Today's Cases: +{data.todayCases ? data.todayCases.toLocaleString() : "0"}<br/>
+                    <br /><br />
+                    Total Confirmed Cases: {data.cases ? data.cases.toLocaleString() : "0"}<br/>
+                    Today's Cases: +{data.todayCases ? data.todayCases.toLocaleString() : "0"}<br />
                     ({getRatio(data.cases, nationalData.cases)}% of National Cases)<br />
                     ({getRatio(data.cases, data.population)}% of {USAState} Population)<br /><br />
                     Total Confirmed Deaths: {data.deaths ? data.deaths.toLocaleString() : "0"}<br />
-                    Today's Deaths: +{data.todayDeaths ? data.todayDeaths.toLocaleString() : "0"}<br/>
+                    Today's Deaths: +{data.todayDeaths ? data.todayDeaths.toLocaleString() : "0"}<br />
                     ({getRatio(data.deaths, nationalData.deaths)}% of National Deaths)<br />
-                    ({getRatio(data.deaths, data.population)}% of {USAState} Population)<br /><br />
-                    Recovered: {data.recovered ? data.recovered.toLocaleString() : "0"}<br />
+                    ({getRatio(data.deaths, data.population)}% of {USAState} Population)<br /><br/>
+                    Recovered: {data.recovered ? data.recovered.toLocaleString() : "0"}<br/>
                     Today's Recoveries: +{data.todayRecovered ? data.todayRecovered.toLocaleString() : "0"}<br />
                     ({getRatio(data.recovered, nationalData.recovered)}% of National Recoveries)<br />
                     (Estimated Recovery Rate: {getRatio(data.recovered, data.cases)}%)<br /><br />
@@ -87,7 +87,10 @@ const LargeInfoWidget = ({USAState, nationalData}) => {
                             <CasesByCountyTable USAState={USAState} />
                         </React.Fragment>
                         }
-                        placement="bottom" arrow interactive>
+                        placement="bottom" 
+                        arrow 
+                        interactive
+                     >
                             <u>TABLE: COVID-19 Cases seperated by {USAState} counties.</u>
                     </DataGridTooltip><br/><br />
     
@@ -97,7 +100,10 @@ const LargeInfoWidget = ({USAState, nationalData}) => {
                             <CasesOverTimeGraph USAState={USAState} />
                         </React.Fragment>
                         }
-                        placement="bottom" arrow interactive>
+                        placement="bottom" 
+                        arrow 
+                        interactive
+                     >
                             <u>GRAPH: Confirmed {USAState} COVID-19 cases over time.</u>
                     </LineGraphTooltip>
                 </CardContent>
