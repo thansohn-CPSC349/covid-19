@@ -14,5 +14,5 @@ Data Source Used: [disease.sh](http://disease.sh)
 
 
 
-To run, node.js and npm must be installed. If so, navigate to the directory and type 
+To run, node.js and npm must be installed. Once they are, navigate to the directory you cloned this repository to and type 
 ```npm start.```
