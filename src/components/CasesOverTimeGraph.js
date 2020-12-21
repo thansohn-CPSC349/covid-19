@@ -3,6 +3,15 @@ import { Chart, Axis, LineAdvance } from 'bizcharts';
 
 import {json} from 'd3-fetch';
 
+let chartScale = {
+  date: {
+    alias:"Date"
+  },
+  cases: {
+    alias:"Confirmed COVID-19 Cases"
+  }
+} 
+  
 function formatData(data) {
   let formattedData = [];
   let newDate;
@@ -38,14 +47,6 @@ const CasesOverTimeGraph = ({USAState}) => {
 
     console.log(data);
   }
-  let chartScale = {
-    date: {
-      alias:"Date"
-    },
-    cases: {
-      alias:"Confirmed COVID-19 Cases"
-    }
-  } 
 
   return (
       <Chart padding="auto"
