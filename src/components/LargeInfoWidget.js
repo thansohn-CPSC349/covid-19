@@ -6,6 +6,24 @@ import CasesByCountyTable from "./CasesByCountyTable";
 
 import {json} from 'd3-fetch';
 
+const LineGraphTooltip = withStyles((theme) => ({
+    tooltip: {
+      backgroundColor: '#f5f5f9',
+      maxWidth: 800,
+      fontSize: theme.typography.pxToRem(12),
+      border: '1px solid #dadde9',
+    },
+}))(Tooltip);
+
+const DataGridTooltip = withStyles((theme) => ({
+    tooltip: {
+      backgroundColor: '#f5f5f9',
+      maxWidth: 600,
+      fontSize: theme.typography.pxToRem(12),
+      border: '1px solid #dadde9',
+    },
+}))(Tooltip);
+
 function getRatio(min, max) {
     return ((min / max) * 100).toFixed(2);
 }
@@ -16,23 +34,6 @@ function getProjectedTotal(cases, deaths) {
 
     return `${Math.min(predicted_cases, predicted_deaths).toLocaleString()} - ${Math.max(predicted_cases, predicted_deaths).toLocaleString()}`
 }
-const LineGraphTooltip = withStyles((theme) => ({
-    tooltip: {
-      backgroundColor: '#f5f5f9',
-      maxWidth: 800,
-      fontSize: theme.typography.pxToRem(12),
-      border: '1px solid #dadde9',
-    },
-  }))(Tooltip);
-
-const DataGridTooltip = withStyles((theme) => ({
-    tooltip: {
-      backgroundColor: '#f5f5f9',
-      maxWidth: 600,
-      fontSize: theme.typography.pxToRem(12),
-      border: '1px solid #dadde9',
-    },
-}))(Tooltip);
 
 const LargeInfoWidget = ({USAState, nationalData}) => {
     const [data, setData] = useState([]);
