@@ -35,7 +35,8 @@ function App() {
             COVID-19 Data for United States - {new Date().toLocaleDateString()}
           </Typography>
         </Toolbar>
-        </AppBar><br/>
+      </AppBar>
+      <br/>
       <div className="info-container" align="center">
         <div className="info-div1">
           <SmallInfoWidget 
