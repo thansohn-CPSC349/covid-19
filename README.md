@@ -13,6 +13,4 @@ Data Source Used: [disease.sh](http://disease.sh)
 
 
 
-
-To run, node.js and npm must be installed. Once they are, navigate to the directory you cloned this repository to and type 
-```npm start```.
+Demo: https://covid-19-lac-ten.vercel.app/
